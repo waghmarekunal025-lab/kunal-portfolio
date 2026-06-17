@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal Waghmare | AI Engineer Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navbar Grid Component Wrapper -->
+    <nav class="navbar">
+        <div class="logo">Kunal<span>.</span></div>
+        
+        <!-- Interactive Action Group Layer -->
+        <div class="nav-actions-wrapper">
+            <!-- Theme Changer Engine Trigger Toggle -->
+            <div class="theme-toggle" id="theme-button">
+                <i class="fas fa-moon"></i>
+            </div>
+            <!-- Mobile Hamburger Button Trigger -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Full-Screen Minimalist Link Drawer Container (Screenshot 2026-06-17 102111.png Layout) -->
+        <ul class="nav-links">
+            <!-- Dedicated Panel Close Action Button -->
+            <button class="mobile-menu-close" aria-label="Close Navigation">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section (Centered Layout like Samir) -->
+    <section id="home" class="hero">
+        <div class="hero-central-container" data-aos="fade-up">
+            
+            <!-- 1. Social Icons at Top -->
+            <div class="social-icons-top">
+                <a href="https://github.com/waghmarekunal025-lab" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kunal-waghmare-4773ab2a7" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/its_kunal_02_?igsh=c2F2bGExa2ZrNG53" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:waghmarekunal025@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <!-- 2. Status Badge 
+            <div class="status-badge">
+                <span class="badge-icon">🚀</span> AICTE OIB-SIP Python Intern
+            </div>-->
+
+            <!-- 3. Domain Title Header -->
+            <span class="domain-title">ARTIFICIAL INTELLIGENCE STUDENT</span>
+
+            <!-- 4. Massive Split Name Layout -->
+            <h1 class="hero-name">Kunal <span>Waghmare</span></h1>
+
+            <!-- 5. Typing Text Tagline -->
+           <h2 class="hero-tagline">Growing my skills as  <span id="typing"></span></h2>
+
+            <!-- 6. Action Button Alignment Row -->
+            <div class="buttons-row">
+                <a href="#contact" class="btn-primary">Contact Now</a>
+                <a href="#projects" class="btn-secondary">See My Work</a>
+                <a href="resume_Kunal_Waghmare.pdf" class="btn-tertiary" download><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+
+            <!-- 7. Profile Photo Sitting Directly Below Buttons -->
+            <div class="hero-image-wrapper">
+                <img src="GajananMaharaj.jpg" alt="Kunal Waghmare" class="profile-image-centered">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" data-aos="fade-up">
+        <h2 class="section-title">About Me</h2>
+        <div class="glass-card about-content">
+            <p>
+                I am an Artificial Intelligence undergraduate passionate about building intelligent systems and solving real-world problems through data and technology. I enjoy working with Machine Learning, Generative AI, Data Science, and Software Development, turning complex conceptual ideas into practical, impactful solutions.
+            </p>
+            <p style="margin-top: 15px; font-weight: 600; color: var(--primary-glow); letter-spacing: 0.5px;">
+                Core Engineering Intersections:
+            </p>
+            <div class="coursework-tags" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+                <span style="font-size: 0.85rem; background: var(--card-border); padding: 5px 14px; border-radius: 20px;">AI & Machine Learning</span>
+                <span style="font-size: 0.85rem; background: var(--card-border); padding: 5px 14px; border-radius: 20px;">Generative AI & LLM Apps</span>
+                <span style="font-size: 0.85rem; background: var(--card-border); padding: 5px 14px; border-radius: 20px;">Data Science & Analytics</span>
+                <span style="font-size: 0.85rem; background: var(--card-border); padding: 5px 14px; border-radius: 20px;">NLP & Conversational AI</span>
+                <span style="font-size: 0.85rem; background: var(--card-border); padding: 5px 14px; border-radius: 20px;">System Design & Problem Solving</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Responsibility Section -->
+    <section id="experience" data-aos="fade-up">
+        <h2 class="section-title">Experience & Leadership</h2>
+        <div class="timeline">
+            <div class="timeline-item glass-card" data-aos="fade-left">
+                <div class="timeline-header">
+                    <h3>AICTE OIB-SIP Python Programming Intern</h3>
+                    <span class="timeline-org">Oasis Infobyte</span>
+                </div>
+                <p class="timeline-meta"><i class="fas fa-map-marker-alt"></i> Remote | June 2025 - July 2025</p>
+                <p class="timeline-desc">
+                    Completed an engineering track executing automated data operations with outstanding remarks. Authored robust modular functional script patterns, handled algorithm scaling, debugged software errors, and deployed standalone system components across projects.
+                </p>
+            </div>
+            <div class="timeline-item glass-card" data-aos="fade-right">
+                <div class="timeline-header">
+                    <h3>Social Media Impact Intern (Social Awareness Wing)</h3>
+                    <span class="timeline-org">Marpu Foundation</span>
+                </div>
+                <p class="timeline-meta"><i class="fas fa-users"></i> Position of Responsibility | Remote | June 2025 - July 2025</p>
+                <p class="timeline-desc">
+                    Spearheaded strategic outreach initiatives within the social awareness wing to drive target community alignment. Monitored content distribution workflows, paired with structural project groups, and evaluated traction indicators to optimize campaign performance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" data-aos="fade-up">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><i class="fab fa-python text-cyan"></i> <h4>Python</h4></div>
+            <div class="skill-card"><i class="fab fa-java text-cyan"></i> <h4>Java</h4></div>
+            <div class="skill-card"><i class="fab fa-html5 text-cyan"></i> <h4>HTML5</h4></div>
+            <div class="skill-card"><i class="fas fa-database text-cyan"></i> <h4>SQL</h4></div>
+            <div class="skill-card"><i class="fas fa-project-diagram text-cyan"></i> <h4>Scikit-Learn</h4></div>
+            <div class="skill-card"><i class="fas fa-chart-line text-cyan"></i> <h4>NumPy / Pandas</h4></div>
+            <div class="skill-card"><i class="fas fa-server text-cyan"></i> <h4>PostgreSQL / SQLite</h4></div>
+            <div class="skill-card"><i class="fas fa-leaf text-cyan"></i> <h4>MongoDB</h4></div>
+            <div class="skill-card"><i class="fab fa-git-alt text-cyan"></i> <h4>Git & GitHub</h4></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card tilt">
+                <div class="project-header">
+                    <i class="fas fa-comments project-icon"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/waghmarekunal025-lab" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Chatbot System</h3>
+                <p>Designed and built an interactive conversational agent leveraging standard Python Natural Language Processing (NLP) libraries for local query management.</p>
+                <div class="project-tags">
+                    <span>Python</span><span>NLP</span><span>Text Processing</span>
+                </div>
+            </div>
+            <div class="project-card tilt">
+                <div class="project-header">
+                    <i class="fas fa-shield-alt project-icon"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/waghmarekunal025-lab" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Spam Detection Model</h3>
+                <p>Constructed an analytical classification engine utilizing Scikit-Learn pipelines to isolate and tag malicious vectors within unstructured datasets.</p>
+                <div class="project-tags">
+                    <span>Machine Learning</span><span>Scikit-Learn</span><span>Feature Extraction</span>
+                </div>
+            </div>
+            <div class="project-card tilt">
+                <div class="project-header">
+                    <i class="fas fa-ticket-alt project-icon"></i>
+                    <div class="project-links">
+                        <a href="https://github.com/waghmarekunal025-lab" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Movie Ticket Booking System</h3>
+                <p>Developed a single-page frontend web environment mapping out live reactive state configurations and responsive user selection grids.</p>
+                <div class="project-tags">
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" data-aos="fade-up">
+        <h2 class="section-title">Achievements & Credentials</h2>
+        <div class="certifications-grid">
+            <div class="cert-card glass-card">
+                <div class="cert-icon-wrapper"><i class="fas fa-award"></i></div>
+                <h4>Generative AI: Elevate your Career</h4>
+                <p class="cert-issuer">IBM | Coursera</p>
+            </div>
+            <div class="cert-card glass-card">
+                <div class="cert-icon-wrapper"><i class="fas fa-award"></i></div>
+                <h4>Introduction to Javascript: Basics</h4>
+                <p class="cert-issuer">Coursera Project Network</p>
+            </div>
+            <div class="cert-card glass-card">
+                <div class="cert-icon-wrapper"><i class="fas fa-award"></i></div>
+                <h4>Testing Basics and Test Management</h4>
+                <p class="cert-issuer">Infosys Springboard</p>
+            </div>
+            <div class="cert-card glass-card">
+                <div class="cert-icon-wrapper"><i class="fas fa-award"></i></div>
+                <h4>Basics of Business Communication</h4>
+                <p class="cert-issuer">Infosys Springboard</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" data-aos="fade-up">
+        <h2 class="section-title">Education</h2>
+        <div class="education-container">
+            <div class="glass-card education-card">
+                <div class="edu-header">
+                    <h3>B.Tech in Artificial Intelligence</h3>
+                    <span class="edu-date">2023 — 2027</span>
+                </div>
+                <p class="institution">JD College of Engineering and Management</p>
+                <div class="edu-highlights">
+                    <span><i class="fas fa-chart-bar"></i> CGPA: 8.04</span>
+                </div>
+                <div class="coursework-tags" style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span style="font-size: 0.8rem; background: var(--card-border); padding: 3px 10px; border-radius: 5px;">OOP</span>
+                    <span style="font-size: 0.8rem; background: var(--card-border); padding: 3px 10px; border-radius: 5px;">DBMS</span>
+                    <span style="font-size: 0.8rem; background: var(--card-border); padding: 3px 10px; border-radius: 5px;">Operating Systems</span>
+                    <span style="font-size: 0.8rem; background: var(--card-border); padding: 3px 10px; border-radius: 5px;">Data Analysis</span>
+                    <span style="font-size: 0.8rem; background: var(--card-border); padding: 3px 10px; border-radius: 5px;">DSA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info glass-card">
+                <h3>Let's collaborate</h3>
+                <p>Have a structural opportunity or technical deployment task? Drop a line.</p>
+                <div class="info-meta">
+                    <a href="mailto:waghmarekunal025@gmail.com"><i class="fas fa-envelope"></i> waghmarekunal025@gmail.com</a>
+                    <a href="tel:+917620368714"><i class="fas fa-phone"></i> +91 7620368714</a>
+                    <span><i class="fas fa-map-marker-alt"></i> Nagpur, India</span>
+                </div>
+            </div>
+            <form class="contact-form glass-card" action="https://api.web3forms.com/submit" method="POST">
+    
+    <!-- 1. Put your custom access key right here -->
+    <input type="hidden" name="access_key" value="e8bcebcf-ed54-4dfa-ba15-56c2e078af30">
+    
+    <!-- 2. This sets the subject line you will see in your Gmail inbox -->
+    <input type="hidden" name="subject" value="e8bcebcf-ed54-4dfa-ba15-56c2e078af30">
+
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn-primary-submit">
+        Send Message <i class="fas fa-paper-plane"></i>
+    </button>
+</form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Kunal Waghmare. Built for high performance.</p>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
