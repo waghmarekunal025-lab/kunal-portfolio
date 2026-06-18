@@ -1,0 +1,847 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.3s ease;
+}
+
+/* Default Theme Configuration (Dark Mode Layout Default) */
+:root {
+    --primary-glow: #00e5ff;
+    --secondary-gradient: #8a2be2;
+    --bg-color: #0a0f1f;
+    --text-color: #ffffff;
+    --text-secondary: #cfcfcf;
+    --text-muted: #b3b3b3;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --navbar-bg: rgba(0, 0, 0, 0.4);
+    --nav-link-color: #ffffff;
+    --btn-secondary-bg: transparent;
+    --btn-tertiary-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Bright Theme Configuration matched to Samir's Clean Layout Style */
+body.light-theme {
+    --bg-color: #fcfbfe;
+    --text-color: #111111;
+    --text-secondary: #444444;
+    --text-muted: #777777;
+    --card-bg: rgba(0, 0, 0, 0.02);
+    --card-border: rgba(0, 0, 0, 0.06);
+    --navbar-bg: rgba(255, 255, 255, 0.7);
+    --nav-link-color: #333333;
+    --btn-secondary-bg: #ffffff;
+    --btn-tertiary-bg: #f1f3f5;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x:hidden;
+}
+
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/* Navbar */
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background: var(--navbar-bg);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--primary-glow);
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+    align-items: center;
+}
+
+.nav-links a{
+    color: var(--nav-link-color);
+    text-decoration:none;
+    transition:.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color: var(--primary-glow);
+}
+
+.theme-toggle {
+    font-size: 1.1rem;
+    color: var(--nav-link-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centered Samir-Style Hero Layout Engine */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 120px 20px 0 20px;
+    text-align: center;
+}
+
+.hero-central-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 1. Social Icons Capsule Row */
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.social-icons-top a {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: var(--primary-glow);
+    transform: scale(1.1);
+}
+
+/* 2. Status Pill Badge */
+.status-badge {
+    background: rgba(0, 229, 255, 0.06);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    color: var(--primary-glow);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 3. Domain Subtitle text */
+.domain-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* 4. Large Display Header Name styling */
+.hero-name {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    letter-spacing: -1px;
+}
+
+.hero-name span {
+    background: linear-gradient(135deg, var(--primary-glow), var(--secondary-gradient));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 5. Sub-tagline sentence header */
+.hero-tagline {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 35px;
+}
+
+.hero-tagline span {
+    color: var(--primary-glow);
+    font-weight: 600;
+}
+
+/* 6. Buttons alignment block */
+.buttons-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn-primary, .btn-secondary, .btn-tertiary {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: #0066ff;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+}
+
+.btn-secondary {
+    background: var(--btn-secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-glow);
+}
+
+.btn-tertiary {
+    background: var(--btn-tertiary-bg);
+    color: var(--text-secondary);
+}
+
+.btn-tertiary:hover {
+    transform: translateY(-2px);
+    color: var(--text-color);
+}
+
+/* 7. Bottom Arc Image Frame */
+/* ==========================================================================
+   7. Bottom Centered Profile Image Enhancements (Fixed & Restyled)
+   ========================================================================== */
+/* ==========================================================================
+   7. Bottom Centered Profile Image - Arch Shape Transformation
+   ========================================================================== */
+.hero-image-wrapper {
+    width: 100%;
+    max-width: 280px; /* Refined width for an elegant arch aspect ratio */
+    height: 380px; 
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 40px auto 0 auto;
+    
+    /* The Arch Blueprint: Curves the top heavily, keeps bottom sharp */
+    border-radius: 150px 150px 0 0; 
+    background: linear-gradient(to top, var(--bg-color), transparent 70%);
+}
+
+.profile-image-centered {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center top; 
+    
+    /* Matches the arch curvature of the wrapper */
+    border-radius: 140px 140px 0 0;
+    border: 3px solid var(--card-border);
+    border-bottom: none;
+    
+    box-shadow: 0 -15px 35px rgba(0, 229, 255, 0.15); /* Ambient neon backglow */
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s ease;
+}
+
+/* Smooth fade-to-black gradient so the bottom edge melts into the website */
+.hero-image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background: linear-gradient(to top, var(--bg-color) 15%, transparent);
+    pointer-events: none;
+}
+
+/* Hover pop effect for the arch */
+.hero-image-wrapper:hover .profile-image-centered {
+    transform: scale(1.04);
+    box-shadow: 0 -15px 40px rgba(0, 229, 255, 0.35);
+    border-color: var(--primary-glow);
+}
+
+/* Responsive adjustment for mobile screens */
+@media(max-width: 768px) {
+    .hero-image-wrapper {
+        max-width: 220px;
+        height: 300px;
+        border-radius: 110px 110px 0 0;
+        margin-top: 30px;
+    }
+    .profile-image-centered {
+        border-radius: 105px 105px 0 0;
+    }
+}
+
+/* Standard Section Layout Templates */
+section{
+    padding: 90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:50px;
+    color: var(--text-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 3px;
+    background: var(--primary-glow);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.glass-card{
+    background: var(--card-bg);
+    backdrop-filter:blur(15px);
+    border:1px solid var(--card-border);
+    border-radius:20px;
+    padding:35px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Experience Timeline Components */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline-item {
+    padding: 30px;
+    border-left: 4px solid var(--primary-glow);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.timeline-header h3 { 
+    color: var(--text-color); 
+    font-size: 1.25rem; 
+}
+
+.timeline-org { 
+    color: var(--primary-glow); 
+    font-weight: 600; 
+}
+
+.timeline-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.timeline-desc { 
+    color: var(--text-secondary); 
+    font-size: 0.95rem; 
+}
+
+/* Technical Skills Grid */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.skill-card{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--card-bg);
+    padding:18px 22px;
+    border-radius:14px;
+    border:1px solid var(--card-border);
+}
+
+.skill-card h4 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.text-cyan { 
+    color: var(--primary-glow); 
+    font-size: 1.4rem; 
+}
+
+/* Projects Card Modules */
+/* Projects Card Link Icons Flex Positioning Layout */
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* 👈 This injects an explicit 16px space between both icons */
+}
+
+.project-links a { 
+    color: var(--text-color); 
+    font-size: 1.2rem; /* Makes icons slightly larger and much easier to click */
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.project-links a:hover {
+    transform: scale(1.15); /* Adds a crisp, interactive hover pop effect */
+    color: var(--primary-glow); /* Glows when a recruiter hovers over it */
+}
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-card{
+    background: var(--card-bg);
+    border-radius:20px;
+    padding:30px;
+    border:1px solid var(--card-border);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.project-icon { 
+    font-size: 1.6rem; 
+    color: var(--primary-glow); 
+}
+
+.project-links a { 
+    color: var(--text-color); 
+    font-size: 1.1rem; 
+}
+
+.project-card h3{
+    margin-bottom:10px;
+    color: var(--text-color);
+    font-size: 1.25rem;
+}
+
+.project-card p{
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-tags { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 8px; 
+    margin-top: 20px; 
+}
+
+.project-tags span { 
+    background: rgba(0, 229, 255, 0.06); 
+    color: var(--primary-glow); 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+    font-weight: 500;
+}
+
+/* Achievements Section layout */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.cert-card {
+    padding: 25px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.cert-icon-wrapper { 
+    font-size: 1.8rem; 
+    color: var(--primary-glow); 
+    margin-bottom: 12px; 
+}
+
+.cert-card h4 { 
+    font-size: 1rem; 
+    margin-bottom: 6px; 
+    color: var(--text-color); 
+}
+
+.cert-issuer { 
+    color: var(--text-muted); 
+    font-size: 0.85rem; 
+}
+
+/* Education Layout Cards */
+.education-container { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+    max-width: 900px; 
+    margin: auto;
+}
+
+.edu-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 5px; 
+}
+
+.edu-date { 
+    color: var(--primary-glow); 
+    font-weight: 600; 
+}
+
+.institution { 
+    color: var(--text-muted); 
+    font-style: italic; 
+    margin-bottom: 10px; 
+}
+
+.edu-highlights i { 
+    color: var(--primary-glow); 
+    margin-right: 5px; 
+}
+
+/* Contact Block & Fields Layout */
+.contact-container { 
+    display: flex; 
+    gap: 30px; 
+    max-width: 1000px; 
+    margin: auto; 
+}
+
+.contact-info, .contact-form { 
+    flex: 1; 
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.info-meta a, .info-meta span { 
+    display: block; 
+    color: var(--text-secondary); 
+    text-decoration: none; 
+    margin-top: 15px; 
+}
+
+.info-meta i { 
+    color: var(--primary-glow); 
+    margin-right: 12px; 
+    width: 20px; 
+    text-align: center; 
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+.form-group input, .form-group textarea { 
+    width: 100%; 
+    padding: 14px; 
+    background: var(--card-bg); 
+    border: 1px solid var(--card-border); 
+    border-radius: 10px; 
+    color: var(--text-color); 
+    font-family: inherit; 
+}
+
+.form-group input:focus, .form-group textarea:focus { 
+    outline: none; 
+    border-color: var(--primary-glow); 
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background: var(--card-bg);
+    border-top: 1px solid var(--card-border);
+    margin-top:50px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primary-glow);
+    border-radius:10px;
+}
+
+/* Responsive Breakpoint Adaptability */
+@media(max-width:992px){
+    .hero-name {
+        font-size: 2.8rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.4rem;
+    }
+
+    .contact-container { 
+        flex-direction: column; 
+    }
+
+    .timeline-header, .edu-header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 5px; 
+    }
+}
+
+@media(max-width:768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
+/* ==========================================================================
+   Mobile Navigation Restyling (Fixes Overlapping Navigation Header)
+   ========================================================================== */
+/* ==========================================================================
+   Header Action Control Group Layout Adjustments
+   ========================================================================== */
+.nav-actions-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color, #ffffff);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Default state styling: Hide the close button asset on desktop layouts */
+.mobile-menu-close {
+    display: none;
+}
+
+/* ==========================================================================
+   Full-Screen Minimalist Mobile Drawer Viewport (Screenshot 2026-06-17 102111.png)
+   ========================================================================== */
+@media(max-width: 768px) {
+    /* Reveal structural trigger buttons inside the navbar bar tracking row */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        padding: 15px 6% !important;
+        flex-direction: row !important; /* Forces layout tracking to stay straight on mobile mobile viewports */
+        justify-content: space-between !important;
+        gap: 0 !important;
+    }
+
+    /* Full-Screen Dark Drawer Panel Setup Specification */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden off-screen by default parameters */
+        width: 100%;  /* Complete viewport width span */
+        height: 100vh;
+        background: #09090b !important; /* Matte black backdrop background layout matching screenshot */
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important; /* Left-aligned typography rows layout */
+        justify-content: center !important;
+        gap: 20px !important;
+        padding: 60px 45px !important;
+        margin: 0 !important;
+        z-index: 2000 !important;
+        transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    }
+
+    /* Trigger Class added via JS handler routine loops */
+    .nav-links.active {
+        right: 0 !important;
+    }
+
+    .nav-links li {
+        width: auto !important;
+        text-align: left !important;
+    }
+
+    /* Heavyweight Impact Bold Typography Styling Variables */
+    .nav-links a {
+        font-size: 2.3rem !important; /* Scale parameters matched to sample framework design */
+        font-weight: 700 !important;  /* Thick bold typography weights */
+        color: #e4e4e7 !important;    /* Clean charcoal white accent layout tint */
+        text-transform: none;
+        letter-spacing: -0.5px !important;
+        transition: color 0.2s ease, padding-left 0.2s ease !important;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #ffffff !important;
+        padding-left: 10px;
+    }
+
+    /* Top-Right Absolute Floating Close Action Target Module */
+    .mobile-menu-close {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: none;
+        border: none;
+        color: #71717a; /* Subtle custom tint gray */
+        font-size: 1.8rem;
+        cursor: pointer;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .mobile-menu-close:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+    }
+}
+
+/* ==========================================================================
+   Arch Profile Image Transformation Configuration
+   ========================================================================== */
+.hero-image-wrapper {
+    width: 100%;
+    max-width: 280px; 
+    height: 380px; 
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 40px auto 0 auto;
+    border-radius: 150px 150px 0 0; 
+    background: linear-gradient(to top, var(--bg-color, #0a0f1f), transparent 70%);
+}
+
+.profile-image-centered {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center top; 
+    border-radius: 140px 140px 0 0;
+    border: 3px solid var(--card-border, rgba(255, 255, 255, 0.08));
+    border-bottom: none;
+    box-shadow: 0 -15px 35px rgba(0, 229, 255, 0.15);
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s ease;
+}
+
+.hero-image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background: linear-gradient(to top, var(--bg-color, #0a0f1f) 15%, transparent);
+    pointer-events: none;
+}
+
+@media(max-width: 768px) {
+    .hero-image-wrapper {
+        max-width: 220px;
+        height: 300px;
+        border-radius: 110px 110px 0 0;
+    }
+    .profile-image-centered {
+        border-radius: 105px 105px 0 0;
+    }
+}
